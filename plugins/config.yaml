@@ -1,0 +1,13 @@
+id: SetDefaultTitle
+name: SetDefaultTitle
+version: 1.0.0
+description: 記事の新規作成時に指定した記事タイトルを挿入します。
+author_name: Hideki Abe
+author_link: https://www.anothersky.pw/
+
+blog_config_template: title_setting.tmpl
+settings:
+    title_setting:
+
+callbacks:
+    MT::App::CMS::template_param.edit_entry: $SetDefaultTitle::SetDefaultTitle::Callbacks::_hdlr_template_param
